@@ -1,0 +1,36 @@
+k8s_flavour: microk8s
+ggs_keyname: ggs
+# Roles
+roles:
+- name: geogeeksuite.kubernetes
+  git: git@github.com:GeoGeekSuite/Kubernets.git
+- name: geogeeksuite.geodatabase
+  git: git@github.com:GeoGeekSuite/Geodatabase.git
+- name: geogeeksuite.pgadmin
+  git: git@github.com:GeoGeekSuite/PgAdmin.git
+- name: geogeeksuite.ingress
+  git: git@github.com:GeoGeekSuite/Ingress.git
+- name: geogeeksuite.webhoster
+  git: git@github.com:GeoGeekSuite/Webhoster.git
+- name: geogeeksuite.nfs
+  git: git@github.com:GeoGeekSuite/NFS.git
+- name: geogeeksuite.ubuntu
+  git: git@github.com:GeoGeekSuite/Ubuntu.git
+# PostGIS Related
+geodatabase:
+    dbname: postgres
+    dbadmin: postgres
+    dbpw: '{{ password }}'
+    dbpwe: '{{ password | b64encode }}'
+    container_image: kartoza/postgis
+    container_version: 14-3.3
+#PgAdmin related
+pgadmin:
+    container_image: dpage/pgadmin4
+    container_version: '6.12'
+    mail: me@geogeeksuite.com
+    pw: '{{ password | b64encode }}'
+web_content_repo: git@github.com:GeoGeekSuite/Startpage.git
+webhoster:
+    image: 'httpd'
+    tag: '2.4'
