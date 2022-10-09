@@ -16,6 +16,8 @@
   #    tags: nfs }
   - { role: geogeeksuite.kubernetes,
       tags: kube }
+  - { role: geogeeksuite.storage,
+      tags: storage }
   - { role: geogeeksuite.geodatabase,
       tags: pg }
   - { role: geogeeksuite.pgadmin,
