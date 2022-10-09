@@ -34,3 +34,6 @@ web_content_repo: git@github.com:GeoGeekSuite/Startpage.git
 webhoster:
     image: 'httpd'
     tag: '2.4'
+#Setup
+resources: resources
+webpage: webpage
