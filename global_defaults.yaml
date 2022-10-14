@@ -40,3 +40,5 @@ webhoster:
 #Setup
 resources: resources
 webpage: webpage
+
+microK8s_addons: 'dashboard dns ingress'
