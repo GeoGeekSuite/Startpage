@@ -14,10 +14,11 @@ roles:
   git: git@github.com:GeoGeekSuite/Webhoster.git
 - name: geogeeksuite.nfs
   git: git@github.com:GeoGeekSuite/NFS.git
-#- name: geogeeksuite.ubuntu
-#  git: git@github.com:GeoGeekSuite/Ubuntu.git
+- name: geogeeksuite.ubuntu
+  git: git@github.com:GeoGeekSuite/Ubuntu.git
 - name: geogeeksuite.storage
   git: git@github.com:GeoGeekSuite/Storage.git
+
   
 # PostGIS Related
 geodatabase:
