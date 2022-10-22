@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: ggs
   vars_files:
   - ../environment.yaml
   - ../global_defaults.yaml
@@ -11,6 +11,11 @@
   - name: Uninstall Kubernetes
     shell:
       cmd: snap remove microk8s
+    become: true
+  - name: Delete storage
+    file:
+      path: '{{ storage_base }}'
+      state: absent
     become: true
 
 
