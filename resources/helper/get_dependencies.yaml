@@ -23,15 +23,6 @@
     ansible.builtin.file:
       path: '../resources'
       state: directory
-  - name: Create webpage folder
-    ansible.builtin.file:
-      path: '../{{ resources }}/{{ webpage }}'
-      state: directory
-  - name: Get webpage
-    ansible.builtin.git:
-      repo: 'git@github.com:GeoGeekSuite/Startpage.git'
-      dest: '../{{ resources }}/{{ webpage }}'
-      force: true
     
 
     

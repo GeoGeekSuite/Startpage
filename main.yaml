@@ -21,6 +21,8 @@
       tags: pg }
   - { role: geogeeksuite.pgadmin,
       tags: pga }
+  - { role: geogeeksuite.startpage,
+      tags: startpage }
   - { role: geogeeksuite.webhoster,
       tags: webhoster }
   - { role: geogeeksuite.ingress,
