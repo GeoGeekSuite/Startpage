@@ -1,5 +1,5 @@
 ---
-- hosts: gss
+- hosts: ggs
   vars_files:
   - ../environment.yaml
   - ../global_defaults.yaml
