@@ -17,6 +17,9 @@
       path: '{{ storage_base }}'
       state: absent
     become: true
-
-
-
+  - name: Delete Manifests
+    file:
+      path: '{{ manifest_folder }}'
+      state: absent
+    become: true
+    tags: delman
