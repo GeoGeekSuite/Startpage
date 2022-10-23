@@ -11,10 +11,11 @@
   roles:
   #- { role: geogeeksuite.nfs,
   #    tags: nfs }
-  - { role: geogeeksuite.credentials,
-      tags: credentials }
+
   - { role: geogeeksuite.kubernetes,
       tags: kube }
+  - { role: geogeeksuite.credentials,
+      tags: credentials }
   - { role: geogeeksuite.storage,
       tags: storage }
   - { role: geogeeksuite.geodatabase,
