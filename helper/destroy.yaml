@@ -23,3 +23,13 @@
       state: absent
     become: true
     tags: delman
+  - name: Delete webcontent
+    file:
+      path: '{{ webpage }}'
+      state: absent
+    become: true
+  - name: Delete roles
+    file:
+      path: '{{ role_base }}'
+      state: absent
+    become: true
