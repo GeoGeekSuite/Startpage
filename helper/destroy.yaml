@@ -1,5 +1,5 @@
 ---
-- hosts: ggs
+- hosts: localhost
   vars_files:
   - ../environment.yaml
   - ../global_defaults.yaml
@@ -12,24 +12,6 @@
     shell:
       cmd: snap remove microk8s
     become: true
-  - name: Delete storage
-    file:
-      path: '{{ storage_base }}'
-      state: absent
-    become: true
-  - name: Delete Manifests
-    file:
-      path: '{{ manifest_folder }}'
-      state: absent
-    become: true
-    tags: delman
-  - name: Delete webcontent
-    file:
-      path: '{{ webpage }}'
-      state: absent
-    become: true
-  - name: Delete roles
-    file:
-      path: '{{ role_base }}'
-      state: absent
-    become: true
+
+
+

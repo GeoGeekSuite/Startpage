@@ -2,4 +2,3 @@ environment.yaml
 inventory.yaml
 roles
 __deprecated_roles/
-resources/webpage

@@ -43,7 +43,6 @@ webhoster:
     image: 'httpd'
     tag: '2.4'
 #Setup
-resources: resources
-webpage: '/home/{{ ansible_user }}/Deploy/resources/webpage'
+
 
 microK8s_addons: 'dashboard dns ingress'

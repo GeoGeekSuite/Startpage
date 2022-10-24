@@ -6,32 +6,23 @@
   tasks:
   - name: Create roles directory
     ansible.builtin.file:
-      path: ../roles
+      path: '{{ role_base }}'
       state: directory
   - name: Create subdirs
     ansible.builtin.file:
-      path: '../roles/{{ item.name }}'
+      path: '{{ role_base }}/{{ item.name }}'
       state: directory
     with_items: '{{ roles }}'
   - name: Get Kubernetes role from git
     ansible.builtin.git:
       repo: '{{ item.git }}'
-      dest: '../roles/{{ item.name }}'
+      dest: '{{ role_base }}/{{ item.name }}'
       force: true
     with_items: '{{ roles }}'
   - name: Create resource folder
     ansible.builtin.file:
-      path: '../resources'
+      path: '{{ resources }}'
       state: directory
-  - name: Create webpage folder
-    ansible.builtin.file:
-      path: '../{{ resources }}/{{ webpage }}'
-      state: directory
-  - name: Get webpage
-    ansible.builtin.git:
-      repo: 'git@github.com:GeoGeekSuite/Startpage.git'
-      dest: '../{{ resources }}/{{ webpage }}'
-      force: true
     
 
     
