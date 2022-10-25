@@ -27,6 +27,8 @@ roles:
   git: git@github.com:GeoGeekSuite/Credentials.git
 - name: geogeeksuite.startpage
   git: git@github.com:GeoGeekSuite/Startpage.git
+- name: geogeeksuite.jupyter
+  git: git@github.com:GeoGeekSuite/Jupiter.git 
 # PostGIS Related
 geodatabase:
     dbname: postgres
@@ -42,7 +44,23 @@ pgadmin:
 webhoster:
     image: 'httpd'
     tag: '2.4'
+jupyter:
+    base_image: jupyter/scipy-notebook
+    base_image_version: 'notebook-6.4.6'
+    ggs_version: 22.10.25.1
 #Setup
 
 
 microK8s_addons: 'dashboard dns ingress'
+
+local_registry:
+  protocol: http
+  url: '{{ public_url }}'
+  port: 32000
+  repository: gss
+
+python:
+  pip_common:
+  - psycopg2-binary
+  - requests
+  - elasticsearch
