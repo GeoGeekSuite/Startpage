@@ -27,8 +27,11 @@ roles:
   git: git@github.com:GeoGeekSuite/Credentials.git
 - name: geogeeksuite.startpage
   git: git@github.com:GeoGeekSuite/Startpage.git
+- name: geogeeksuite.notebooks
+  git: git@github.com:GeoGeekSuite/Notebooks.git
 - name: geogeeksuite.jupyter
   git: git@github.com:GeoGeekSuite/Jupiter.git 
+
 # PostGIS Related
 geodatabase:
     dbname: postgres
