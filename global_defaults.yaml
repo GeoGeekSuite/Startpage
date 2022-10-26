@@ -45,13 +45,13 @@ webhoster:
     image: 'httpd'
     tag: '2.4'
 jupyter:
-    base_image: jupyter/scipy-notebook
+    base_image: docker.io/jupyter/scipy-notebook
     base_image_version: 'notebook-6.4.6'
     ggs_version: 22.10.25.1
 #Setup
 
 
-microK8s_addons: 'dashboard dns ingress'
+microK8s_addons: 'dashboard dns ingress registry'
 
 local_registry:
   protocol: http
