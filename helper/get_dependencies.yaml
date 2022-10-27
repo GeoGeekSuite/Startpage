@@ -23,6 +23,11 @@
     ansible.builtin.file:
       path: '{{ resources }}'
       state: directory
+  - name: Clone Python Helpers
+    ansible.builtin.git:
+      repo: git@github.com:GeoGeekSuite/PythonHelpers.git
+      dest: '{{ python_helpers }}'
+    
     
 
     

@@ -30,7 +30,7 @@ roles:
 - name: geogeeksuite.notebooks
   git: git@github.com:GeoGeekSuite/Notebooks.git
 - name: geogeeksuite.jupyter
-  git: git@github.com:GeoGeekSuite/Jupiter.git 
+  git: git@github.com:GeoGeekSuite/Jupiter.git
 
 # PostGIS Related
 geodatabase:
