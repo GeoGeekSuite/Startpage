@@ -3,6 +3,9 @@
 - name: Create dir for startpage
   file:
     path: '{{ startpage }}'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+  become: true
 - name: Render index
   template:
     src: index.j2.html
