@@ -1,0 +1,9 @@
+---
+# tasks file for startpage
+- name: Create dir for startpage
+  file:
+    path: '{{ startpage }}'
+- name: Render index
+  template:
+    src: index.j2.html
+    dest: '{{ startpage }}/index.html'
