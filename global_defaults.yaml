@@ -50,7 +50,7 @@ webhoster:
 jupyter:
     base_image: docker.io/jupyter/scipy-notebook
     base_image_version: 'notebook-6.4.6'
-    ggs_version: 22.10.25.1
+    ggs_version: 22.10.29.1
 #Setup
 
 
